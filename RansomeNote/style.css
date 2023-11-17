@@ -1,0 +1,36 @@
+body {
+
+  overflow: hidden; /* Hide scrollbars */
+
+
+
+
+    overflow-x: hidden;
+    margin: 0;
+    background-color: #000000;
+    background-image: linear-gradient(160deg, #000000 0%, #000000 100%);
+}
+
+.snow {
+    top: -5%;
+    border-radius: calc(var(--size) * 2 );
+    position: absolute;
+    width: var(--size);
+    height: var(--size);
+    background-color:  #fbfcfc ;
+}
+
+.snow-anim {
+    animation: var(--time-drop) drop var(--delay) infinite linear, var(--time-swing) step var(--delay)  ease-in-out infinite alternate-reverse;
+}
+
+@keyframes drop {
+    from { top: -5%;}
+    to {top: 100%;}
+}
+
+@keyframes step {
+    from { transform: translateX(-12px);}
+    to {transform: translateX(12px);}
+}
+
